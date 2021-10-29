@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 5000px;
+        }
+        .page_one,
+        .page_two {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .image_dog {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .image_dog img {
+            flex: 1;
+            border: solid 1px #ccc;
+            margin: 10px;
+            padding: 5px;
+        }
+        table {
+            border-spacing: 0;
+        }
+        table tr td {
+            width: 300px;
+        }
+    
+        table tr th {
+            text-align: left;
+            background-color: rgb(100, 99, 99);
+            font-size: 18px;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="page_one">
+        <h1>dogs</h1>
+        <div class="image_dog">
+            <img src="images/dog.jpg" alt="">
+            <img src="images/dog.jpg" alt="">
+            <img src="images/dog.jpg" alt="">
+            <img src="images/dog.jpg" alt="">
+            <img src="images/dog.jpg" alt="">
+            <img src="images/dog.jpg" alt="">
+            <img src="images/dog.jpg" alt="">
+            <img src="images/dog.jpg" alt="">
+        </div>
+    </div>
+    <hr>
+    <div class="page_two">
+        <h1>title</h1>
+        <h2>subtitle</h2>
+        <p>author time</p>
+        <ol>
+            <li>hhhhhhhhh</li>
+            <li>hhhhhhhhh</li>
+            <li>hhhhhhhhh</li>
+        </ol>
+        <table border="1">
+            <tr>
+                <th>表头</th>
+                <th>表头</th>
+                <th class="last">表头</th>
+            </tr>
+            <tr>
+                <td>something</td>
+                <td>something</td>
+                <td>
+                    <a href="#">search</a>
+                </td>
+            </tr>
+            <tr>
+                <td>something</td>
+                <td>something</td>
+                <td>
+                    <a href="#">search</a>
+                </td>
+            </tr>
+            <tr>
+                <td>something</td>
+                <td>something</td>
+                <td>
+                    <a href="#">search</a>
+                </td>
+            </tr>
+            <tr>
+                <td>something</td>
+                <td>something</td>
+                <td>
+                    <a href="#">search</a>
+                </td>
+            </tr>
+            <tr>
+                <td>total</td>
+                <td colspan="2">1100</td>
+            </tr>
+        </table>
+    </div>
+
+    
+</body>
+
+</html>
