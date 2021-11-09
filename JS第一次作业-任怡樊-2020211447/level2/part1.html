@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part1</title>
+</head>
+<body>
+</body>
+<script>
+    var num = prompt("Please input a number:");
+    // console.log(num);
+    // console.log(typeof(num));
+    while (isNaN(num)){
+        num = prompt("Error!Please input a number again:");
+    }
+    num = parseInt(num);
+    alert("输入数字的平方为：" + num * num);
+</script>
+</html>
