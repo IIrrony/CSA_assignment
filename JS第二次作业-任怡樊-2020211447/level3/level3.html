@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level3</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+</body>
+<script>
+    const data = {
+        age: 18,
+        name: "这是真的难",
+        education: ["小学", "初中", "高中", "大学", undefined, null],
+        friends: [{
+                name: "Amber",
+                sex: "woman"
+            },
+            {
+                name: "Barbara",
+                sex: "woman"
+            },
+            {
+                name: "Venti",
+                sex: "man"
+            }
+        ],
+        work: {
+            time: "2021",
+            project: {
+                name: "test",
+                obtain: ["css", "html", "js"]
+            }
+        },
+        play: function () {
+            console.log("玩滑板");
+        }
+    }
+
+    function deepcopy(obj) {
+        // 先判断obj是否为空 或 是否为对象
+        if (obj === null || typeof (obj) !== "object")
+            return obj;
+        let newobj = Array.isArray(obj) ? [] : {};
+        for (const attr in obj) {
+            // 递归拷贝
+            newobj[attr] = deepcopy(obj[attr])
+        }
+        return newobj;
+    }
+    const obj1 = deepcopy(data);
+    obj1["age"] = 20;
+    console.log(obj1);
+    obj1.play()
+    console.log(data);
+    // jQuery深拷贝
+    const obj2 = jQuery.extend(true, {}, data);
+    obj2["age"] = 21;
+    console.log(obj2);
+</script>
+</html>
