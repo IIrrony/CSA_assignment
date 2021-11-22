@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            width: 100px;
+            margin: 50px auto 20px;
+        }
+
+        .comment {
+            position: relative;
+            width: 290px;
+            height: 150px;
+            margin: 0 auto 20px;
+        }
+
+        button {
+            position: absolute;
+            right: -55px;
+            bottom: 0;
+            width: 100px;
+            height: 40px;
+            font-size: 18px;
+        }
+
+        textarea {
+            font-size: 20px;
+            outline-style: none;
+            padding: 5px;
+        }
+
+        .select {
+            width: 300px;
+            height: 50px;
+            padding-left: 20px;
+            margin: 0 auto;
+        }
+        .content {
+            width: 350px;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        ul li {
+            width: 350px;
+            font-size: 18px;
+            margin-bottom: 5px;
+            background-color: rgb(240, 240, 240);
+        }
+
+        ul li a {
+            float: right;
+            text-decoration: none;
+            color: red;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>留言框</h1>
+    <div class="comment">
+        <textarea name="" id="" cols="20" rows="6"></textarea>
+        <button>发布</button>
+    </div>
+    <div class="content">
+        <ul>
+        </ul>
+    </div>
+</body>
+<script>
+    var text = document.querySelector("textarea");
+    var btn = document.querySelector("button");
+    var ul = document.querySelector("ul");
+    btn.addEventListener("click", function () {
+        // 用trim去掉字符串两端空格，精准判断输入内容是否为空
+        let con = text.value.trim();
+        if (con === "") {
+            // 恢复默认
+            text.value = "";
+            alert("请输入内容哦！！！！😎");
+        } else {
+            let li = document.createElement("li");
+            li.innerHTML = con + '<a href="javascript:;">删除</a>';
+            ul.insertBefore(li, ul.children[0]);
+            const remove = ul.children[0].querySelector("a");
+            remove.addEventListener("click", function () {
+                ul.removeChild(this.parentNode);
+            })
+            // 恢复默认
+            text.value = "";
+        }
+    })
+</script>
+
+</html>

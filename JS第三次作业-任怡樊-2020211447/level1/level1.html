@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            margin: 100px auto;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        button {
+            float: right;
+            width: 50px;
+            height: 25px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>主题颜色更改按钮</p>
+        <button>点我</button>
+        <br>
+        <br>
+        <p>字体大小更改按钮</p>
+        <button>点我</button>
+    </div>
+</body>
+<script>
+    let btns = document.querySelectorAll("button");
+    let box = document.querySelector(".box");
+
+    btns[0].addEventListener("click", function () {
+        box.style.backgroundColor = getRandomColor();
+    })
+    btns[1].addEventListener("click", function () {
+        box.style.fontSize = getRandomSize() + "px";
+    })
+
+    function getRandomColor() {
+        let color = "#";
+        //随机生成6位0-15之间的数字，再用toString(16)将数字转成16进制
+        for (let i = 0; i < 6; i++)
+            color += parseInt(Math.random() * 16).toString(16);
+        return color;
+    }
+
+    function getRandomSize() {
+        let size = Math.ceil(Math.random() * 25);//向上取整，避免取到 0 
+        return size;
+    }
+</script>
+
+</html>
