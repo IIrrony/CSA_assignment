@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+.singer a {
+    color: rgb(62, 174, 248);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    display: block;
+    height: 500px;
+}
+
+label {
+    font-size: 18px;
+}
+
+#search {
+    width: 250px;
+    height: 40px;
+    outline-style: none;
+    font-size: 16px;
+    text-indent: 5px;
+    border-radius: 10px;
+    border: 1px solid #666;
+    margin: 0 10px;
+    box-shadow: rgb(177, 177, 177) 2px 1px 5px;
+
+}
+
+#btn {
+    width: 60px;
+    height: 30px;
+}
+
+li {
+    list-style: none;
+    display: block;
+    height: 35px;
+    line-height: 34px;
+    padding: 0 10px;
+    border-radius: 8px;
+    color: #666;
+}
+
+li:hover {
+    border: 1px rgb(145, 145, 145) solid;
+}
+
+.box {
+    width: 850px;
+    height: 800px;
+    margin: 30px auto;
+}
+
+.result {
+    width: 850px;
+    height: 800px;
+    margin-top: 40px;
+}
+
+li div {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.index {
+    width: 40px;
+    text-align: center;
+}
+
+.title {
+    text-indent: 10px;
+    width: 400px;
+    color: rgb(62, 174, 248);
+}
+
+.singer,
+.zhuanji {
+    float: right;
+    width: 150px;
+    margin: 0 5px;
+}
