@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level2-1</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    for (var i = 0; i < 5; i++) {
+        // 立即执行函数
+        (function (j) {
+            setTimeout(function () {
+                console.log(new Date, j);
+            }, 1000);
+        })(i);
+    }
+    console.log(new Date, i);
+
+</script>
+
+</html>

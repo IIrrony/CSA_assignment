@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level3</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1. Student('fxy') => 输出：
+    // Hi!This is fxy!
+
+    //     2. Student('fxy').sleep(3).study('javascript') => 输出：
+    // Hi!This is fxy!
+    //     //等待3秒
+    //     Wake up after 3
+    // Study javascript~
+
+    //     3. Student('fxy').study('javascript').study('Vue') => 输出：
+    // Hi!This is fxy!
+    //     Study javascript~
+    //     Study Vue~
+
+    //     4. Student('fxy').sleepFirst(5).study('Ajax') => 输出
+    // //等待5s
+    // Wake up after 5
+    // Hi!This is fxy!
+    //     Study Ajax
+    function Student(name) {
+        function People(name) {
+            console.log("Hi! This is " + name + "!");
+        }
+
+        People.prototype.sleep = function (time) {
+            setTimeout(function () {
+
+            }, 1000 * time);
+        }
+
+        People.prototype.sleepFirst = function (time) {
+
+        }
+        People.prototype.study = function (course) {
+            console.log("Study " + course);
+        }
+
+        return new People(name);
+    }
+
+    Student('fxy');
+    Student('fxy').sleep(3).study('javascript');
+    // Student('fxy').study('javascript').study('Vue');
+    // Student('fxy').sleepFirst(5).study('Ajax');
+</script>
+
+</html>
